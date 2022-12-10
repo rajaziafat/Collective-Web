@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.lh-1 {
+  line-height: 1 !important;
+}
+.lh-1_1 {
+  line-height: 1.1 !important;
+}
+.lh-1_2 {
+  line-height: 1.2 !important;
+}
+.lh-1_3 {
+  line-height: 1.3 !important;
+}
+.lh-1_4 {
+  line-height: 1.4 !important;
+}
+.lh-1_5 {
+  line-height: 1.5 !important;
+}
+.lh-1_6 {
+  line-height: 1.6 !important;
+}
+.lh-1_7 {
+  line-height: 1.7 !important;
+}
+.lh-1_8 {
+  line-height: 1.8 !important;
+}
+.lh-1_9 {
+  line-height: 1.9 !important;
+}
+
+p {
+  line-height: 1.5 !important;
+}
+
+a {
+  line-height: 1.3 !important;
+}
+
+@layer base {
+  * {
+    @apply text-white font-source-sans-pro scroll-smooth;
+  }
+
+  body {
+    @apply bg-body-bg text-white scroll-smooth;
+  }
+
+  html {
+    @apply bg-body-bg text-white scroll-smooth;
+  }
+
+  .fs-inherit {
+    font-size: inherit;
+  }
+
+  .fs-16px {
+    @apply text-base lg:text-[1.171303074670571vw];
+  }
+
+  .fs-18px {
+    @apply text-[1.3177159590043923vw];
+  }
+
+  .fs-20px {
+    @apply text-lg lg:text-[1.4641288433382138vw];
+  }
+
+  .fs-24px {
+    @apply text-lg md:text-xl lg:text-[1.7569546120058566vw];
+  }
+
+  .fs-30px {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-[2.1961932650073206vw];
+  }
+
+  .fs-44px {
+    @apply text-xl md:text-2xl lg:text-44px;
+  }
+
+  .fs-60px {
+    @apply text-3xl md:text-4xl lg:text-[4.392386530014641vw];
+  }
+
+  .fs-80px {
+    @apply text-4xl md:text-5xl lg:text-[5.856515373352855vw];
+  }
+
+  .bullet {
+    @apply flex items-center text-base md:text-lg lg:text-[1.4641288433382138vw] text-white opacity-80 font-light before:content-[''] before:min-w-[.3em] before:h-[.3em] before:rounded-full before:bg-white before:mr-3 lg:before:mr-0_8vw;
+  }
+}
+
+@layer components {
+  .container-wrapper {
+    @apply w-[88%] mx-auto;
+  }
+}
+
+.black-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.black-screen.show {
+  opacity: 1;
+  pointer-events: visible;
+}
